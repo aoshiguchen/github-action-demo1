@@ -1,0 +1,13 @@
+name: test1
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    steps:
+      - id: step1
+        name: hello
+        run: echo 'hello aoshiguchen...'
