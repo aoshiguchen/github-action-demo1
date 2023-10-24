@@ -15,7 +15,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - id: step1
-        name: hello
-        run: echo 'hello aoshiguchen...'
+        name: 输出hello
+        env:
+          asgc: '傲世孤尘'
+        run: echo 'hello $asgc'
   unit-test:
-    needs: build
+    needs: [build]
